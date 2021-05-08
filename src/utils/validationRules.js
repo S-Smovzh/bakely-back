@@ -1,0 +1,13 @@
+export const validationRules = {
+  TEL_NUM_MIN_LENGTH: 12,
+  TEL_NUM_MAX_LENGTH: 20,
+  PASSWORD_MIN_LENGTH: 8,
+  PASSWORD_MAX_LENGTH: 30,
+  EMAIL_LOCAL_OR_DOMAIN_PART_MIN_LENGTH: 1,
+  EMAIL_LOCAL_PART_MAX_LENGTH: 63,
+  EMAIL_DOMAIN_PART_MAX_LENGTH: 190,
+
+  WORD_VALIDATION: new RegExp(/[a-zA-Zа-яА-ЯҐґЄєІіЇї\- ]+/),
+  FIRST_AND_LAST_NAME_WHITELIST_SYMBOLS: new RegExp(/^[a-zA-Zа-яА-ЯЁёҐґЄєІіЇї\s\-]{1,40}$/),
+  PASSWORD_WHITELIST_SYMBOLS: new RegExp(/^[\d\w%@?№$^]$/)
+};
