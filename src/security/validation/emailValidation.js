@@ -68,7 +68,7 @@ export default async function validateEmail(targetEmail) {
       '                                                            </tbody>' +
       '                                                        </table>' +
       '                                                        <center style="min-width:484px;width:100%">' +
-      '                                                            <img src="http://localhost:3000/img/logo-min.png"' +
+      '                                                            <img src="https://res.cloudinary.com/gachi322/image/upload/v1620490480/Bakely/logo-min_pbbgds.png"' +
       '                                                                 align="center"' +
       '                                                                 style="margin:0 auto;clear:both;display:block;float:none;max-width:100%;outline:0;text-align:center;text-decoration:none;width:auto;height:150px"' +
       '                                                                 alt=""/>' +
