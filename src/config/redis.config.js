@@ -5,7 +5,7 @@ const require = createRequire(import.meta.url);
 const redis = require('redis');
 const { promisify } = require("util");
 
-dotenv.config({path: './../.env'});
+dotenv.config({path: './.env'});
 
 const client = redis.createClient(
   process.env.REDIS_PORT,

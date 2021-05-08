@@ -3,7 +3,7 @@ import * as winston from 'winston';
 const options = {
   file: {
     level: 'info',
-    filename: `/src/logs/app.log`,
+    filename: '/src/logs/app.log',
     handleExceptions: true,
     json: true,
     maxsize: 5242880, // 5MB

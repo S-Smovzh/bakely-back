@@ -4,7 +4,7 @@ import {createRequire} from 'module';
 const require = createRequire(import.meta.url);
 const pg = require('pg');
 
-dotenv.config({path: './../.env'});
+dotenv.config({path: './.env'});
 
 const pool = new pg.Pool({
   user: process.env.PGUSER,

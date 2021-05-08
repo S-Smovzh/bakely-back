@@ -1,16 +1,17 @@
 {
   "name": "bakely-back",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Node.JS Server for Bakely App",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": "14.11.0"
+  },
   "scripts": {
-    "test": "jest",
-    "start": "node src/server.js",
-    "dev": "nodemon -r dotenv/config src/index.js"
+    "start": "node src/index.js"
   },
   "keywords": [],
-  "author": "Smovzh Sergey",
+  "author": "Sergey Smovzh",
   "license": "MIT",
   "dependencies": {
     "argon2": "^0.27.1",
