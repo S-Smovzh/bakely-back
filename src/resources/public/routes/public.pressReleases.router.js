@@ -1,5 +1,5 @@
-import * as pressReleasesController from '../controllers/public.pressReleases.controller.js';
 import { createRequire } from 'module';
+import * as pressReleasesController from '../controllers/public.pressReleases.controller';
 
 const require = createRequire(import.meta.url);
 const express = require('express');

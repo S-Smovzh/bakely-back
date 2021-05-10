@@ -1,4 +1,4 @@
-import * as cateringService from '../service/CateringsService.js';
+import * as cateringService from '../service/CateringsService';
 
 const getAll = async function (req, res) {
   const { data, success, errors } = await cateringService.default.getAll(req);

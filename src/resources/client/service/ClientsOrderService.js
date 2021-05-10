@@ -1,5 +1,5 @@
-import db from '../../../config/database.config.js';
 import crypto from 'crypto';
+import db from '../../../config/database.config';
 
 async function proceedOrder(req) {
   const pool = db.pool;

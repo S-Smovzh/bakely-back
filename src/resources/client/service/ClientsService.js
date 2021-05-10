@@ -1,7 +1,7 @@
-import * as validator from '../../../security/validation/validation.config.js';
-import db from '../../../config/database.config.js';
 import crypto from 'crypto';
-import * as token from '../../../security/jwt/TokenService.js';
+import * as validator from '../../../security/validation/validation.config';
+import * as token from '../../../security/jwt/TokenService';
+import db from '../../../config/database.config';
 
 async function createSession(req, res) {
   const pool = db.pool;

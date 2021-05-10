@@ -1,6 +1,6 @@
-import * as clientsController from '../controllers/clients.controller.js';
 import {createRequire} from 'module';
-import * as token from '../../../security/jwt/TokenService.js';
+import * as clientsController from '../controllers/clients.controller';
+import * as token from '../../../security/jwt/TokenService';
 
 const require = createRequire(import.meta.url);
 const express = require('express');

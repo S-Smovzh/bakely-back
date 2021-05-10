@@ -1,6 +1,6 @@
-import * as clientsService from '../service/ClientsService.js';
-import * as clientsOrdersService from '../service/ClientsOrderService.js';
-import * as clientsCartService from '../service/ClientsCartService.js';
+import * as clientsOrdersService from '../service/ClientsOrderService';
+import * as clientsCartService from '../service/ClientsCartService';
+import * as clientsService from '../service/ClientsService';
 
 const createSession = async function (req, res) {
   try {

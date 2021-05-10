@@ -1,8 +1,8 @@
-import * as userService from '../service/UsersService.js';
-import * as userOrdersService from '../service/UsersOrderService.js';
-import * as userCartService from '../service/UsersCartService.js';
-import logError from '../service/LogService.js';
-import * as tokenService from '../../../security/jwt/TokenService.js';
+import * as tokenService from '../../../security/jwt/TokenService';
+import * as userOrdersService from '../service/UsersOrderService';
+import * as userCartService from '../service/UsersCartService';
+import * as userService from '../service/UsersService';
+import logError from '../service/LogService';
 
 const errorHandler = async function (req, res) {
   try {

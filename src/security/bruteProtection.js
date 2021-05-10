@@ -1,6 +1,6 @@
 import rateLimiterFlexiblePKG from "rate-limiter-flexible";
-import {errorCodes} from "../utils/errorCodes.js";
-import redisClient from '../config/redis.config.js';
+import redisClient from '../config/redis.config';
+import {errorCodes} from "../utils/errorCodes";
 
 const {RateLimiterRedis, RateLimiterMemory} = rateLimiterFlexiblePKG;
 

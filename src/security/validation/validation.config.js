@@ -1,11 +1,11 @@
 import validator from 'validator';
-import isEmpty from './isEmpty.js';
+import isEmpty from './isEmpty';
 import argon2 from 'argon2';
 import _ from 'lodash';
-import db from '../../config/database.config.js';
-import {errorCodes} from '../../utils/errorCodes.js';
-import {validationRules as rules} from '../../utils/validationRules.js';
-import {contactSubjects} from '../../utils/contactSubjects.js';
+import {validationRules as rules} from '../../utils/validationRules';
+import {contactSubjects} from '../../utils/contactSubjects';
+import {errorCodes} from '../../utils/errorCodes';
+import db from '../../config/database.config';
 
 async function validateRegistration(data) {
   let errors = {};

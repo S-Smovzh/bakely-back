@@ -1,4 +1,4 @@
-import db from '../../../config/database.config.js';
+import db from '../../../config/database.config';
 
 async function getStockOfProduct(req) {
   const pool = db.pool;

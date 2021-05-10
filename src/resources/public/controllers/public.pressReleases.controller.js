@@ -1,4 +1,4 @@
-import * as pressReleasesService from '../service/PressReleasesService.js';
+import * as pressReleasesService from '../service/PressReleasesService';
 
 const getAll = async function (req, res) {
   const { data, success, errors } = await pressReleasesService.default.getAll(req);

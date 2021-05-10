@@ -1,5 +1,5 @@
-import * as bakeriesController from '../controllers/public.bakeries.controller.js';
 import { createRequire } from 'module';
+import * as bakeriesController from '../controllers/public.bakeries.controller';
 
 const require = createRequire(import.meta.url);
 const express = require('express');
