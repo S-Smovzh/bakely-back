@@ -57,8 +57,8 @@ app.use(morgan('combined', { stream: winston.stream }));
 
 export const start = async () => {
   try {
-    app.listen((process.env.SERVER_PORT || 5000), () => {
-      console.log(`REST API running on port ${process.env.SERVER_PORT}.`);
+    app.listen((process.env.PORT || 5000), () => {
+      console.log(`REST API running on port ${process.env.PORT}.`);
     });
   } catch (e) {
     console.error(e);
