@@ -11,7 +11,8 @@ const pool = new pg.Pool({
   host: process.env.PGHOST,
   database: process.env.PGDATABASE,
   password: process.env.PGPASS,
-  port: process.env.PGPORT
+  port: process.env.PGPORT,
+  ssl: true
 }).on('error', (err) => console.error('ERR:POSTGRESQL: ', err));
 
 export default {
