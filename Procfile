@@ -1,1 +1,3 @@
-worker: node src/index.js
+heroku ps:scale web=0
+heroku ps:scale worker=1
+web: node src/index.js
