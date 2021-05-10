@@ -12,7 +12,7 @@ const pool = new pg.Pool({
   database: process.env.PGDATABASE,
   password: process.env.PGPASS,
   port: process.env.PGPORT,
-  ssl: true
+  ssl: { rejectUnauthorized: false }
 }).on('error', (err) => console.error('ERR:POSTGRESQL: ', err));
 
 export default {
