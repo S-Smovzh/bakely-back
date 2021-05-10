@@ -1,7 +1,7 @@
 import { createRequire } from 'module';
 import dotenv from 'dotenv';
 import crypto from 'crypto';
-import redisClient from '../../config/redis.config';
+import redisClient from '../../config/redis.config.js';
 
 const require = createRequire(import.meta.url);
 const nodemailer = require('nodemailer');

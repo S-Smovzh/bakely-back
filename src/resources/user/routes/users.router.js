@@ -1,6 +1,6 @@
 import {createRequire} from 'module';
-import * as userController from '../controllers/users.controller';
-import * as token from '../../../security/jwt/TokenService';
+import * as userController from '../controllers/users.controller.js';
+import * as token from '../../../security/jwt/TokenService.js';
 
 const require = createRequire(import.meta.url);
 const express = require('express');

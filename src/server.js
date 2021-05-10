@@ -4,19 +4,19 @@ import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import cors from 'cors';
-import availableCitiesRouter from './resources/public/routes/public.available-cities.router';
-import cateringEventsRouter from './resources/public/routes/public.catering-events.router';
-import pressReleasesRouter from './resources/public/routes/public.pressReleases.router';
-import ingredientsRouter from './resources/public/routes/public.ingredients.router';
-import productsRouter from './resources/public/routes/public.products.router';
-import bakeriesRouter from './resources/public/routes/public.bakeries.router';
-import clientRouter from './resources/client/routes/clients.router';
-import usersRouter from './resources/user/routes/users.router';
-import winston from './config/winston';
+import availableCitiesRouter from './resources/public/routes/public.available-cities.router.js';
+import cateringEventsRouter from './resources/public/routes/public.catering-events.router.js';
+import pressReleasesRouter from './resources/public/routes/public.pressReleases.router.js';
+import ingredientsRouter from './resources/public/routes/public.ingredients.router.js';
+import productsRouter from './resources/public/routes/public.products.router.js';
+import bakeriesRouter from './resources/public/routes/public.bakeries.router.js';
+import clientRouter from './resources/client/routes/clients.router.js';
+import usersRouter from './resources/user/routes/users.router.js';
+import winston from './config/winston.js';
 
 const require = createRequire(import.meta.url);
 const express = require('express');
-const helmet = require("helmet");
+const helmet = require('helmet');
 
 const app = express();
 dotenv.config({ path: '../.env' });
@@ -28,7 +28,7 @@ app.use(
     origin: [process.env.FRONT_URL],
     credentials: true,
     exposedHeaders: ['Token', 'Refresh-Token', 'Client-Token', 'Content-Type'],
-    methods: ["GET", 'POST', 'DELETE', 'PUT', 'OPTIONS']
+    methods: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS']
   })
 );
 app.use(helmet.contentSecurityPolicy());

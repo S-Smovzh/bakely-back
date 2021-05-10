@@ -1,4 +1,4 @@
-import * as availableCitiesService from '../service/availableCitiesService';
+import * as availableCitiesService from '../service/availableCitiesService.js';
 
 const getAll = async function (req, res) {
   const { data, success, errors } = await availableCitiesService.default.getAll(req);

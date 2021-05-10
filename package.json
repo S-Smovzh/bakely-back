@@ -9,7 +9,7 @@
     "node": "14.11.0"
   },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js --es-module-specifier-resolution=node"
   },
   "keywords": [],
   "author": "Sergey Smovzh",

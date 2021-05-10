@@ -1,5 +1,5 @@
 import { createRequire } from 'module';
-import * as productsController from '../controllers/public.products.controller';
+import * as productsController from '../controllers/public.products.controller.js';
 
 const require = createRequire(import.meta.url);
 const express = require('express');

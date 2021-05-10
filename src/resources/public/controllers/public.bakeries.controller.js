@@ -1,5 +1,5 @@
-import * as bakeriesService from '../service/BakeriesService';
-import * as bakeriesProductsService from '../service/BakeriesProductsService';
+import * as bakeriesService from '../service/BakeriesService.js';
+import * as bakeriesProductsService from '../service/BakeriesProductsService.js';
 
 const getAll = async function (req, res) {
   const { data, success, errors } = await bakeriesService.default.getAll(req);

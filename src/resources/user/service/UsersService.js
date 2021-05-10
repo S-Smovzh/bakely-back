@@ -1,18 +1,18 @@
 import * as crypto from 'crypto';
 import argon2 from 'argon2';
-import * as validator from '../../../security/validation/validation.config';
-import validateEmail from "../../../security/validation/emailValidation";
-import * as token from '../../../security/jwt/TokenService';
-import redisClient from '../../../config/redis.config';
-import {errorCodes} from "../../../utils/errorCodes";
-import db from '../../../config/database.config';
+import * as validator from '../../../security/validation/validation.config.js';
+import validateEmail from '../../../security/validation/emailValidation.js';
+import * as token from '../../../security/jwt/TokenService.js';
+import redisClient from '../../../config/redis.config.js';
+import {errorCodes} from '../../../utils/errorCodes.js';
+import db from '../../../config/database.config.js';
 import {
   MAX_WRONG_ATTEMPTS_BY_IP_PER_DAY,
   MAX_CONSECUTIVE_FAILS_BY_EMAIL_AND_IP,
   limiterByIP,
   limiterEmailAndIP,
   getEmailIpKey
-} from '../../../security/bruteProtection'
+} from '../../../security/bruteProtection.js'
 
 const MAX_STORED_DELIVERY_ADDRESSES = 3;
 

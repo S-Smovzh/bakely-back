@@ -1,8 +1,8 @@
 import {createRequire} from 'module';
 import dotenv from 'dotenv';
 import ms from 'ms';
-import {errorCodes} from '../../utils/errorCodes';
-import db from '../../config/database.config';
+import {errorCodes} from '../../utils/errorCodes.js';
+import db from '../../config/database.config.js';
 
 const require = createRequire(import.meta.url);
 const jwt = require('jsonwebtoken');

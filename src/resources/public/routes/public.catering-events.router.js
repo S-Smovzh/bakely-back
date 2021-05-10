@@ -1,5 +1,5 @@
 import { createRequire } from 'module';
-import * as cateringController from '../controllers/public.catering-event.controller';
+import * as cateringController from '../controllers/public.catering-event.controller.js';
 
 const require = createRequire(import.meta.url);
 const express = require('express');

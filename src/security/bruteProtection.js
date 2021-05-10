@@ -1,6 +1,6 @@
-import rateLimiterFlexiblePKG from "rate-limiter-flexible";
-import redisClient from '../config/redis.config';
-import {errorCodes} from "../utils/errorCodes";
+import rateLimiterFlexiblePKG from 'rate-limiter-flexible';
+import redisClient from '../config/redis.config.js';
+import {errorCodes} from '../utils/errorCodes.js';
 
 const {RateLimiterRedis, RateLimiterMemory} = rateLimiterFlexiblePKG;
 
@@ -16,10 +16,10 @@ const rateLimiterMiddleware = (req, res, next) => {
   rateLimiter.consume(req.connection.remoteAddress)
     .then(() => {
       res.set({
-        "Retry-After": rateLimiter.msBeforeNext / 1000,
-        "X-RateLimit-Limit": options.points,
-        "X-RateLimit-Remaining": rateLimiter.remainingPoints,
-        "X-RateLimit-Reset": new Date(Date.now() + rateLimiter.msBeforeNext)
+        'Retry-After': rateLimiter.msBeforeNext / 1000,
+        'X-RateLimit-Limit': options.points,
+        'X-RateLimit-Remaining': rateLimiter.remainingPoints,
+        'X-RateLimit-Reset': new Date(Date.now() + rateLimiter.msBeforeNext)
       });
       next();
     })

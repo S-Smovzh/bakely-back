@@ -1,4 +1,4 @@
-import * as ingredientsService from '../service/IngredientsService';
+import * as ingredientsService from '../service/IngredientsService.js';
 
 const getAll = async function (req, res) {
   const { data, success, errors } = await ingredientsService.default.getAll(req);

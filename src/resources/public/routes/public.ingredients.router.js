@@ -1,5 +1,5 @@
 import { createRequire } from 'module';
-import * as ingredientsController from '../controllers/public.ingredients.controller';
+import * as ingredientsController from '../controllers/public.ingredients.controller.js';
 
 const require = createRequire(import.meta.url);
 const express = require('express');

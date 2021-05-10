@@ -1,5 +1,5 @@
 import { createRequire } from 'module';
-import * as availableCitiesController from '../controllers/public.available-cities.controller';
+import * as availableCitiesController from '../controllers/public.available-cities.controller.js';
 
 const require = createRequire(import.meta.url);
 const express = require('express');

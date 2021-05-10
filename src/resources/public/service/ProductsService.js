@@ -1,6 +1,6 @@
 import {createRequire} from 'module';
-import db from '../../../config/database.config';
-import {defineName} from '../../../utils/lang';
+import db from '../../../config/database.config.js';
+import {defineName} from '../../../utils/lang.js';
 
 const require = createRequire(import.meta.url);
 const format = require('pg-format');
