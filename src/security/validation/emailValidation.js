@@ -12,9 +12,9 @@ export default async function validateEmail(targetEmail) {
   let verificationLink = process.env.FRONT_URL.concat(`/en/user/verification/${Buffer.from(targetEmail).toString('base64')}/${generateVerificationCode(targetEmail)}`);
 
   const transporter = nodemailer.createTransport({
-    host: process.env.MAIL_HOST || 'smtp.gmail.com',
-    port: process.env.MAIL_PORT || 587,
-    secure: false,
+    host: process.env.MAIL_HOST || 'smtp.zoho.com',
+    port: process.env.MAIL_PORT || 465,
+    secure: true,
     requireTLS: true,
     auth: {
       user: process.env.MAIL_USER,
