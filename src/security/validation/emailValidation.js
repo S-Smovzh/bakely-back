@@ -11,6 +11,13 @@ dotenv.config({ path: '../../../.env' });
 export default async function validateEmail(targetEmail) {
   let verificationLink = process.env.FRONT_URL.concat(`/en/user/verification/${Buffer.from(targetEmail).toString('base64')}/${generateVerificationCode(targetEmail)}`);
 
+  console.log(
+    process.env.MAIL_HOST,
+    process.env.MAIL_PORT,
+      process.env.MAIL_USER,
+      process.env.MAIL_PASSWORD
+    );
+
   const transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST || 'smtp.zoho.com',
     port: process.env.MAIL_PORT || 465,
@@ -23,7 +30,7 @@ export default async function validateEmail(targetEmail) {
   });
 
   const mailOptions = {
-    from: '"Bakely" <noreply@bakely.com>',
+    from: '"Bakely" <bakely@zohomail.eu>',
     to: targetEmail,
     subject: 'Email verification',
     text: `Welcome to Bakely!\n\nTo activate your account copy and paste the link below in your browser.\n\n ${verificationLink}\n\n Hurry up! Your activation link expires in 24 hours!\n\n\nThis message was produced and distributed by Bakely LLC, Bohdan Khmelnytsky street 17/52а , Kiyv 01030\n\nwww.bakely.com`,
