@@ -8,9 +8,6 @@
   "scripts": {
     "start": "node src/index.js --es-module-specifier-resolution=node"
   },
-  "engines": {
-    "node": "15.x"
-  },
   "keywords": [],
   "author": "Sergey Smovzh",
   "license": "MIT",
