@@ -42,11 +42,11 @@ async function validateRegistration(data) {
       max: rules.TEL_NUM_MAX_LENGTH
     })) {
       errors.telNum = errorCodes.INVALID_TEL_NUM_LENGTH;
-    } else if (data.telNum.includes('+38') && !validator.default.isMobilePhone(data.telNum.replaceAll(' ', '').replaceAll('-', ''), 'uk-UA')) {
+    } else if (data.telNum.includes('+38') && !validator.default.isMobilePhone(data.telNum.replace(/\s/g, '').replace(/-/g, ''), 'uk-UA')) {
       errors.telNum = errorCodes.INVALID_TEL_NUM;
-    } else if ((data.telNum.includes('+7') || data.telNum.includes('+8')) && !validator.default.isMobilePhone(data.telNum.replaceAll(' ', '').replaceAll('-', ''), 'ru-RU')) {
+    } else if ((data.telNum.includes('+7') || data.telNum.includes('+8')) && !validator.default.isMobilePhone(data.telNum.replace(/\s/g, '').replace(/-/g, ''), 'ru-RU')) {
       errors.telNum = errorCodes.INVALID_TEL_NUM;
-    } else if (data.telNum.includes('+1') && !validator.default.isMobilePhone(data.telNum.replaceAll(' ', '').replaceAll('-', ''), 'en-US')) {
+    } else if (data.telNum.includes('+1') && !validator.default.isMobilePhone(data.telNum.replace(/\s/g, '').replace(/-/g, ''), 'en-US')) {
       errors.telNum = errorCodes.INVALID_TEL_NUM;
     }
     if (isEmpty(data.password)) {
@@ -106,11 +106,11 @@ async function validateClientsContactData(data) {
     } else if (isEmpty(data.email) && !isEmpty(data.telNum)) {
       if (!validator.default.isLength(data.password, {min: rules.TEL_NUM_MIN_LENGTH, max: rules.TEL_NUM_MAX_LENGTH})) {
         errors.telNum = errorCodes.INVALID_TEL_NUM_LENGTH;
-      } else if (data.telNum.includes('+38') && !validator.default.isMobilePhone(data.telNum.replaceAll(' ', '').replaceAll('-', ''), 'uk-UA')) {
+      } else if (data.telNum.includes('+38') && !validator.default.isMobilePhone(data.telNum.replace(/\s/g, '').replace(/-/g, ''), 'uk-UA')) {
         errors.telNum = errorCodes.INVALID_TEL_NUM;
-      } else if ((data.telNum.includes('+7') || data.telNum.includes('+8')) && !validator.default.isMobilePhone(data.telNum.replaceAll(' ', '').replaceAll('-', ''), 'ru-RU')) {
+      } else if ((data.telNum.includes('+7') || data.telNum.includes('+8')) && !validator.default.isMobilePhone(data.telNum.replace(/\s/g, '').replace(/-/g, ''), 'ru-RU')) {
         errors.telNum = errorCodes.INVALID_TEL_NUM;
-      } else if (data.telNum.includes('+1') && !validator.default.isMobilePhone(data.telNum.replaceAll(' ', '').replaceAll('-', ''), 'en-US')) {
+      } else if (data.telNum.includes('+1') && !validator.default.isMobilePhone(data.telNum.replace(/\s/g, '').replace(/-/g, ''), 'en-US')) {
         errors.telNum = errorCodes.INVALID_TEL_NUM;
       }
     } else if (isEmpty(data.email) && isEmpty(data.telNum)) {
@@ -125,11 +125,11 @@ async function validateClientsContactData(data) {
 
       if (!validator.default.isLength(data.password, {min: rules.TEL_NUM_MIN_LENGTH, max: rules.TEL_NUM_MAX_LENGTH})) {
         errors.telNum = errorCodes.INVALID_TEL_NUM_LENGTH;
-      } else if (data.telNum.includes('+38') && !validator.default.isMobilePhone(data.telNum.replaceAll(' ', '').replaceAll('-', ''), 'uk-UA')) {
+      } else if (data.telNum.includes('+38') && !validator.default.isMobilePhone(data.telNum.replace(/\s/g, '').replace(/-/g, ''), 'uk-UA')) {
         errors.telNum = errorCodes.INVALID_TEL_NUM;
-      } else if ((data.telNum.includes('+7') || data.telNum.includes('+8')) && !validator.default.isMobilePhone(data.telNum.replaceAll(' ', '').replaceAll('-', ''), 'ru-RU')) {
+      } else if ((data.telNum.includes('+7') || data.telNum.includes('+8')) && !validator.default.isMobilePhone(data.telNum.replace(/\s/g, '').replace(/-/g, ''), 'ru-RU')) {
         errors.telNum = errorCodes.INVALID_TEL_NUM;
-      } else if (data.telNum.includes('+1') && !validator.default.isMobilePhone(data.telNum.replaceAll(' ', '').replaceAll('-', ''), 'en-US')) {
+      } else if (data.telNum.includes('+1') && !validator.default.isMobilePhone(data.telNum.replace(/\s/g, '').replace(/-/g, ''), 'en-US')) {
         errors.telNum = errorCodes.INVALID_TEL_NUM;
       }
     }
@@ -367,11 +367,11 @@ async function validateTelNumChange(inputData, oldTelNum) {
       max: rules.TEL_NUM_MAX_LENGTH
     })) {
       errors.newTelNum = errorCodes.INVALID_TEL_NUM_LENGTH;
-    } else if (inputData.newTelNum.includes('+38') && !validator.default.isMobilePhone(inputData.newTelNum.replaceAll(' ', '').replaceAll('-', ''), 'uk-UA')) {
+    } else if (inputData.newTelNum.includes('+38') && !validator.default.isMobilePhone(inputData.newTelNum.replace(/\s/g, '').replace(/-/g, ''), 'uk-UA')) {
       errors.newTelNum = errorCodes.INVALID_TEL_NUM;
-    } else if ((inputData.newTelNum.includes('+7') || inputData.newTelNum.includes('+8')) && !validator.default.isMobilePhone(inputData.newTelNum.replaceAll(' ', '').replaceAll('-', ''), 'ru-RU')) {
+    } else if ((inputData.newTelNum.includes('+7') || inputData.newTelNum.includes('+8')) && !validator.default.isMobilePhone(inputData.newTelNum.replace(/\s/g, '').replace(/-/g, ''), 'ru-RU')) {
       errors.newTelNum = errorCodes.INVALID_TEL_NUM;
-    } else if (inputData.newTelNum.includes('+1') && !validator.default.isMobilePhone(inputData.newTelNum.replaceAll(' ', '').replaceAll('-', ''), 'en-US')) {
+    } else if (inputData.newTelNum.includes('+1') && !validator.default.isMobilePhone(inputData.newTelNum.replace(/\s/g, '').replace(/-/g, ''), 'en-US')) {
       errors.newTelNum = errorCodes.INVALID_TEL_NUM;
     }
   } catch (err) {
