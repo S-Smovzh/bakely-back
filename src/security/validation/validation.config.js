@@ -72,6 +72,9 @@ async function validateRegistration(data) {
   } catch (err) {
     errors.internalFailure = err;
   }
+
+  console.log(errors);
+
   return {
     errors,
     isValid: isEmpty(errors)
@@ -133,6 +136,9 @@ async function validateClientsContactData(data) {
   } catch (err) {
     errors.internalFailure = err;
   }
+
+  console.log(errors);
+
   return {
     errors,
     isValid: isEmpty(errors)
@@ -176,6 +182,9 @@ async function validateContactForm(data) {
   } catch (err) {
     errors.internalFailure = err;
   }
+
+  console.log(errors);
+
   return {
     errors,
     isValid: isEmpty(errors)
@@ -196,6 +205,9 @@ async function validateLoginEmail(inputData) {
   } catch (err) {
     errors.internalFailure = err;
   }
+
+  console.log(errors);
+
   return {
     errors,
     isValid: isEmpty(errors)
@@ -214,6 +226,9 @@ async function validateLoginPassword(inputData, databaseData) {
   } catch (err) {
     errors.internalFailure = err;
   }
+
+  console.log(errors);
+
   return {
     errors,
     isValid: isEmpty(errors)
@@ -257,6 +272,8 @@ async function validateDeliveryAddress(inputData) {
     errors.internalFailure = err;
   }
 
+  console.log(errors);
+
   return {
     errors,
     isValid: isEmpty(errors)
@@ -285,6 +302,8 @@ async function validateEmailChange(inputData, databaseData) {
   } catch (err) {
     errors.internalFailure = err;
   }
+
+  console.log(errors);
 
   return {
     errors,
@@ -319,6 +338,9 @@ async function validatePasswordChange(inputData, databaseData) {
   } catch (err) {
     errors.internalFailure = err;
   }
+
+  console.log(errors);
+
   return {
     errors,
     isValid: isEmpty(errors)
@@ -356,6 +378,8 @@ async function validateTelNumChange(inputData, oldTelNum) {
     errors.internalFailure = err;
   }
 
+  console.log(errors);
+
   return {
     errors,
     isValid: isEmpty(errors)
@@ -377,6 +401,8 @@ async function validateEmail(data) {
   } catch (err) {
     errors.internalFailure = err;
   }
+
+  console.log(errors);
 
   return {
     errors,

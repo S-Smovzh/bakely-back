@@ -368,7 +368,7 @@ async function deleteDeliveryAddress(req) {
     await pool.query(sql, [userId, addressId]);
     return {success: true, errors: null};
   } catch (e) {
-    console.log('Address adding failure in UsersService.deleteDeliveryAddress()  \n\n' + e.stack);
+    console.log('Address deleting failure in UsersService.deleteDeliveryAddress()  \n\n' + e.stack);
     return {success: false, errors: {code: 500}};
   }
 }
