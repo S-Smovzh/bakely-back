@@ -10,7 +10,6 @@
 /src/__tests__
 jest-preset.js
 nodemon.json
-package-lock.json
 
 # misc
 .DS_Store
